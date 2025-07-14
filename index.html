@@ -1,34 +1,101 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-  <meta charset="UTF-8">
-  <title>پروژه‌های HTML من</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>پروژه‌های HTML</title>
   <style>
+    @import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css');
+
     body {
-      font-family: sans-serif;
+      font-family: 'Vazir', Tahoma, sans-serif;
+      background: linear-gradient(135deg, #e0f0ff, #a2c4ff);
+      margin: 0;
+      padding: 40px 20px;
+      color: #0f294d;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+
+    .container {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      max-width: 450px;
+      width: 100%;
+      padding: 30px 25px;
       text-align: center;
-      background-color: #f0f8ff;
-      padding: 50px;
     }
+
     h1 {
+      margin-bottom: 30px;
+      font-weight: 800;
+      font-size: 2.4rem;
       color: #1c4565;
+      letter-spacing: 1.2px;
     }
-    a {
-      display: block;
-      margin: 10px;
-      color: #398acb;
-      font-size: 18px;
+
+    .project-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .project-list li {
+      margin-bottom: 18px;
+    }
+
+    .project-list a {
       text-decoration: none;
+      color: #398acb;
+      font-size: 1.25rem;
+      background: #d9eaff;
+      display: block;
+      padding: 14px 20px;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(57, 138, 203, 0.25);
+      user-select: none;
     }
-    a:hover {
-      text-decoration: underline;
+
+    .project-list a:hover,
+    .project-list a:focus {
+      background: #3a7bd5;
+      color: white;
+      box-shadow: 0 8px 16px rgba(57, 138, 203, 0.45);
+      transform: translateY(-3px);
+      outline: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      body {
+        padding: 20px 10px;
+      }
+      .container {
+        padding: 25px 20px;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .project-list a {
+        font-size: 1.1rem;
+        padding: 12px 18px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>پروژه‌های HTML من</h1>
-  <a href="MainTheme/html/">مشاهده پروژه ۱</a>
-  <a href="theme 1/">مشاهده پروژه ۲</a>
-  <a href="theme 2/">مشاهده پروژه ۳</a>
+  <div class="container" role="main">
+    <h1> HTML پروژه‌های</h1>
+    <ul class="project-list">
+      <li><a href="MainTheme/html/" target="_blank" rel="noopener noreferrer">مشاهده پروژه ۱</a></li>
+      <li><a href="theme1/" target="_blank" rel="noopener noreferrer">مشاهده پروژه ۲</a></li>
+      <li><a href="theme2/" target="_blank" rel="noopener noreferrer">مشاهده پروژه ۳</a></li>
+    </ul>
+  </div>
 </body>
 </html>
